@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOTY — Запис на заняття</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="signup-page">
+<a href="index.html" class="signup-home">ГОЛОВНА</a>
+        <section class="signup-intro">
+            <h1>ПОЧНЕМО<br>ЗНАЙОМСТВО</h1>
+
+            <p>
+                Заповніть коротку форму. Адміністратор
+                зв'яжеться з вами, допоможе обрати групу
+                та відповість на питання.
+            </p>
+        </section>
+
+        <section class="signup-form-wrapper">
+
+            <form class="signup-card" id="footyForm">
+
+                <h2>Розкажіть про дитину</h2>
+
+                <div class="form-field">
+                    <label for="program">Оберіть програму *</label>
+                    <select id="program" name="program" required>
+                        <option value="">Оберіть програму</option>
+                        <option value="BABY FOOTY">BABY FOOTY</option>
+                        <option value="MINI FOOTY">MINI FOOTY</option>
+                        <option value="JUNIOR FOOTY">JUNIOR FOOTY</option>
+                        <option value="FOOTY PRO">FOOTY PRO</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="childName">Ім'я дитини *</label>
+                        <input
+                            type="text"
+                            id="childName"
+                            name="childName"
+                            required
+                            placeholder="Ім'я дитини"
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="childAge">Вік дитини *</label>
+                        <input
+                            type="number"
+                            id="childAge"
+                            name="childAge"
+                            min="0"
+                            max="18"
+                            required
+                            placeholder="Вік"
+                        >
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="parentName">Ім'я одного з батьків *</label>
+                    <input
+                        type="text"
+                        id="parentName"
+                        name="parentName"
+                        required
+                        placeholder="Ваше ім'я"
+                    >
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="phone">Номер телефону *</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            required
+                            placeholder="+380"
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email *</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            placeholder="Email"
+                        >
+                    </div>
+                </div>
+
+                <button type="submit" class="signup-submit">
+                    Записатися
+                </button>
+
+                <p id="formMessage" class="form-message"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script>
+        const footyForm = document.getElementById("footyForm");
+        const formMessage = document.getElementById("formMessage");
+
+        footyForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const age = Number(document.getElementById("childAge").value);
+            if (age < 0 || age > 18) {
+                formMessage.textContent = "Введіть коректний вік дитини.";
+                return;
+            }
+
+            formMessage.textContent =
+                "Дякуємо! Вашу заявку заповнено. Адміністратор зв'яжеться з вами.";
+
+            footyForm.reset();
+        });
+    </script>
+
+</body>
+</html>

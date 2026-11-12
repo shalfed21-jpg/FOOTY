@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOTY — Програми</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ff896b;
+            color: #111;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 35px 30px;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .logo {
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        h1 {
+            font-size: 25px;
+            text-align: center;
+            font-weight: 900;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 192px);
+            justify-content: center;
+            gap: 10px 38px;
+        }
+
+        .program-card {
+            width: 192px;
+            min-height: 188px;
+            border: 1.5px solid #111;
+            border-radius: 23px;
+            padding: 12px 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .baby {
+            background-color: #f8f6ef;
+        }
+
+        .mini {
+            background-color: #dcf1e4;
+        }
+
+        .junior {
+            background-color: #ffdfd5;
+        }
+
+        .pro {
+            background-color: #104431;
+            color: white;
+        }
+
+        .number {
+            font-size: 13px;
+            font-weight: bold;
+            padding: 4px 6px;
+            border-radius: 5px;
+            margin-bottom: 29px;
+            background-color: #f8d957;
+        }
+
+        .mini .number {
+            background-color: transparent;
+        }
+
+        .junior .number {
+            background-color: #ff896b;
+        }
+
+        .pro .number {
+            background-color: #237b5b;
+        }
+
+        .program-card h2 {
+            font-size: 13px;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+
+        .description {
+            font-size: 7px;
+            line-height: 1.4;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .pro .description {
+            color: #d4e1da;
+        }
+
+        .age {
+            font-size: 7px;
+            margin-bottom: 8px;
+        }
+
+        .training {
+            font-size: 7px;
+            margin-bottom: 10px;
+        }
+
+        .signup {
+            display: inline-block;
+            margin-top: auto;
+            padding: 9px 10px;
+            background-color: #ff343c;
+            color: white;
+            border: 1px solid #111;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .signup:hover {
+            background-color: #e5222c;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 520px) {
+            .container {
+                padding: 25px 12px;
+            }
+
+            header {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 21px;
+            }
+
+            .programs-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+            }
+
+            .program-card {
+                width: 100%;
+                min-height: 190px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="program-header">
+    <a href="index.html" class="home-link">ГОЛОВНА</a>
+
+    <a href="programs.html" class="program-link">ПРОГРАМИ</a>
+
+    <h1>СВІЙ ТЕМП ДЛЯ КОЖНОГО ВІКУ</h1>
+</header>
+
+        <main class="programs-grid">
+            <section class="program-card baby">
+                <span class="number">01</span>
+                <h2>BABY FOOTY</h2>
+                <p class="description">
+                    Розвиток через гру, прості ігри,
+                    взаємодію з батьками та перше
+                    знайомство з м'ячем.
+                </p>
+                <p class="age">40 хв</p>
+                <p class="training">Батьки обов'язково присутні</p>
+                <a href="#" class="signup">Записатися</a>
+            </section>
+
+            <section class="program-card mini">
+                <span class="number">02</span>
+                <h2>MINI FOOTY</h2>
+                <p class="description">
+                    Ігри, рух, координація та перша
+                    самостійність у безпечному
+                    середовищі.
+                </p>
+                <p class="age">40 хв</p>
+                <p class="training">Батьки обов'язково присутні</p>
+                <a href="#" class="signup">Записатися</a>
+            </section>
+
+            <section class="program-card junior">
+                <span class="number">03</span>
+                <h2>JUNIOR FOOTY</h2>
+                <p class="description">
+                    Структуровані рухові заняття,
+                    координація, командна робота
+                    та вправи з м'ячем.
+                </p>
+                <p class="age">45 хв</p>
+                <p class="training">Батьки не обов'язково присутні</p>
+                <a href="#" class="signup">Записатися</a>
+            </section>
+
+            <section class="program-card pro">
+                <span class="number">04</span>
+                <h2>FOOTY PRO</h2>
+                <p class="description">
+                    Складніша фізична активність,
+                    координація, командна робота
+                    та футбольні навички.
+                </p>
+                <p class="age">60 хв</p>
+                <p class="training">Батьки не обов'язково присутні</p>
+                <a href="#" class="signup">Записатися</a>
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

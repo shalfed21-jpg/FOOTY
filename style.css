@@ -1,0 +1,739 @@
+/* =========================
+   1. ОСНОВНЫЕ НАСТРОЙКИ
+========================= */
+
+:root {
+    --color-bg: #FBF9F5;
+    --color-coral: #F27956;
+    --color-green: #58B847;
+    --color-red: #E53928;
+    --color-red-hover: #C82B1C;
+    --text-dark: #1E1E1E;
+    --text-muted: #666666;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* =========================
+   2. ГОЛОВНА СТОРІНКА
+========================= */
+
+.hero-section {
+    padding: 24px 0 60px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    aspect-ratio: 2 / 3;
+    max-height: 600px;
+    background-color: #CDE3D6;
+}
+
+.hero-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+.logo-badge {
+    width: 36px;
+    height: 20px;
+    background: linear-gradient(
+        90deg,
+        #E53928 0%,
+        #FF914D 50%,
+        #58B847 100%
+    );
+    border-radius: 18px 18px 0 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--color-red);
+}
+
+/* Кнопки */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-red {
+    background-color: var(--color-red);
+    color: #FFFFFF;
+}
+
+.btn-red:hover {
+    background-color: var(--color-red-hover);
+}
+
+.btn-sm {
+    padding: 10px 22px;
+    font-size: 0.85rem;
+}
+
+.btn-lg {
+    padding: 14px 36px;
+    font-size: 1rem;
+}
+
+/* Заголовок */
+
+.hero-title-box {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: clamp(2.4rem, 3.8vw, 3.5rem);
+    line-height: 1.1;
+    color: var(--text-dark);
+}
+
+.text-green {
+    color: var(--color-green);
+}
+
+.sketch-ball-svg {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    width: 54px;
+    height: 54px;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+}
+
+.hero-action-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.social-proof {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.avatars {
+    display: flex;
+}
+
+.avatars img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    object-fit: cover;
+    margin-left: -10px;
+}
+
+.avatars img:first-child {
+    margin-left: 0;
+}
+
+/* =========================
+   3. СТРАНИЦА ПРОГРАМ
+========================= */
+
+.programs-page {
+    min-height: 100vh;
+    background-color: #FF896B;
+    padding: 35px 30px;
+}
+
+.program-header {
+    max-width: 1200px;
+    margin: 0 auto 18px;
+    display: grid;
+    grid-template-columns: 120px 1fr 120px;
+    align-items: center;
+    gap: 15px;
+}
+.program-header h1 {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.home-link {
+    color: #111;
+    font-weight: 800;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.home-link:hover {
+    color: var(--color-red);
+}
+
+.header-signup {
+    background-color: var(--color-red);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header-signup:hover {
+    background-color: var(--color-red-hover);
+}
+
+/* Карточки программ */
+
+.programs-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 192px);
+    justify-content: center;
+    gap: 10px 38px;
+}
+
+.program-card {
+    width: 192px;
+    min-height: 188px;
+    border: 1.5px solid #111;
+    border-radius: 23px;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.baby {
+    background-color: #F8F6EF;
+}
+
+.mini {
+    background-color: #DCF1E4;
+}
+
+.junior {
+    background-color: #FFDFD5;
+}
+
+.pro {
+    background-color: #104431;
+    color: white;
+}
+
+/* Номера карточек */
+
+.number {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 6px;
+    border-radius: 5px;
+    margin-bottom: 29px;
+    background-color: #F8D957;
+}
+
+.mini .number {
+    background-color: transparent;
+}
+
+.junior .number {
+    background-color: #FF896B;
+}
+
+.pro .number {
+    background-color: #237B5B;
+}
+
+/* Текст карточек */
+
+.program-card h2 {
+    font-size: 13px;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.description {
+    font-size: 7px;
+    line-height: 1.4;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.pro .description {
+    color: #D4E1DA;
+}
+
+.age {
+    font-size: 7px;
+    margin-bottom: 8px;
+}
+
+.training {
+    font-size: 7px;
+    margin-bottom: 10px;
+}
+
+/* Кнопки записи */
+
+.signup {
+    display: inline-block;
+    margin-top: auto;
+    padding: 9px 10px;
+    background-color: #FF343C;
+    color: white;
+    border: 1px solid #111;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.signup:hover {
+    background-color: #E5222C;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   4. ФОРМА ЗАПИСИ
+========================= */
+
+#signup {
+    padding: 60px 24px;
+    text-align: center;
+    background-color: var(--color-coral);
+}
+
+#signup h2 {
+    font-family: var(--font-heading);
+    margin-bottom: 20px;
+}
+
+#signupForm {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#signupForm input {
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    font-family: var(--font-body);
+}
+
+#signupForm button {
+    padding: 14px;
+    cursor: pointer;
+}
+
+/* =========================
+   5. АДАПТИВНОСТЬ
+========================= */
+
+@media (max-width: 860px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+@media (max-width: 520px) {
+    .programs-page {
+        padding: 25px 12px;
+    }
+
+    .program-header {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .program-header h1 {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        font-size: 21px;
+    }
+
+    .header-signup {
+        justify-self: end;
+    }
+
+    .programs-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .program-card {
+        width: 100%;
+        min-height: 190px;
+        padding: 12px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .site-header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.program-header {
+    max-width: 1200px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.home-link,
+.program-link {
+    color: #1E1E1E;
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.home-link:hover,
+.program-link:hover {
+    color: #E53928;
+}
+
+.program-header h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 25px;
+}
+/* =========================
+   СТОРІНКА ЗАПИСУ FOOTY
+========================= */
+
+.signup-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background: #104F38;
+    border-top: 3px solid #FF896B;
+    border-bottom: 3px solid #FF896B;
+    margin: 8px 16px;
+}
+
+/* Ліва частина */
+
+.signup-intro {
+    padding: 80px 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 2px solid #E8D95A;
+    color: #FFFFFF;
+}
+
+.signup-intro h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.12;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+}
+
+.signup-intro p {
+    max-width: 320px;
+    color: #D8E5DC;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Права частина */
+
+.signup-form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+}
+
+.signup-card {
+    width: 100%;
+    max-width: 620px;
+    background: #FBF9F5;
+    border-radius: 14px;
+    padding: 35px 32px;
+}
+
+.signup-card h2 {
+    font-family: var(--font-body);
+    font-size: clamp(22px, 3vw, 28px);
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+/* Поля форми */
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+    margin-bottom: 27px;
+}
+
+.form-field label {
+    font-size: 10px;
+    font-weight: 500;
+    padding-left: 6px;
+}
+
+.form-field input,
+.form-field select {
+    width: 100%;
+    height: 43px;
+    border: none;
+    outline: none;
+    border-radius: 18px;
+    background: #D9D9D9;
+    padding: 0 14px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: #222222;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+    outline: 2px solid #58B847;
+    background: #EEEEEE;
+}
+
+.form-field select {
+    cursor: pointer;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* Кнопка */
+
+.signup-submit {
+    display: inline-block;
+    background: #E53928;
+    color: #FFFFFF;
+    border: 1px solid #1E1E1E;
+    border-radius: 10px;
+    padding: 12px 17px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.signup-submit:hover {
+    background: #C82B1C;
+    transform: translateY(-2px);
+}
+
+.form-message {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #104F38;
+    line-height: 1.5;
+}
+
+/* Адаптація для телефонів */
+
+@media (max-width: 750px) {
+    .signup-page {
+        grid-template-columns: 1fr;
+        margin: 8px;
+    }
+
+    .signup-intro {
+        padding: 35px 25px;
+        border-right: none;
+        border-bottom: 2px solid #E8D95A;
+    }
+
+    .signup-intro h1 {
+        font-size: 32px;
+    }
+
+    .signup-form-wrapper {
+        padding: 25px 15px;
+    }
+
+    .signup-card {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 430px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .signup-card h2 {
+        font-size: 22px;
+    }
+}
+.signup-home {
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    color: #FFFFFF;
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    z-index: 10;
+}
+
+.signup-home:hover {
+    color: #E8D95A;
+}
+/* Виправлення мобільної навігації */
+
+@media (max-width: 860px) {
+
+    .site-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        font-size: 12px;
+    }
+
+    .program-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .program-header h1 {
+        flex-basis: 100%;
+        order: 3;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .home-link,
+    .program-link {
+        display: inline-block;
+        font-size: 12px;
+    }
+}
